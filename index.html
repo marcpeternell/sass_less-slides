@@ -42,26 +42,28 @@
 				<!------------------- Agenda ----------------------------->
 				<section>
 					<h2>Was machen wir heute?</h2>
-					<p class="fragment">Vorstellrunde</p>
-					<p class="fragment">LESS</p>
-					<p class="fragment">SASS</p>
+					<p>Vorstellrunde</p>
+					<p>LESS</p>
+					<p>SASS</p>
 				</section>
 
+				<!-- Wird noch auskommentiert -->
 				<!------------------- Vorstellrunde ----------------------------->
 				<section>
 					<h2>Vorstellrunde</h2>
-					<p class="fragment">Name?</p>
-					<p class="fragment">Was habt ihr vor dem Studium gemacht?</p>
-					<p class="fragment">Arbeit? Wenn ja was?</p>
-					<p class="fragment">Wie seid ihr auf Webdevelopment gekommen?</p>
-					<p class="fragment">Hobbies?</p>
+					<p>Name?</p>
+					<p>Was habt ihr vor dem Studium gemacht?</p>
+					<p>Arbeit? Wenn ja was?</p>
+					<p>Wie seid ihr auf Webdevelopment gekommen?</p>
+					<p>Hobbies?</p>
 				</section>
+
 				<!------------------- Warum Präprozessoren ----------------------------->
 				<section>
 					<h2>Warum Präprozessoren?</h2>
-					<p class="fragment">CSS Code ist ewig lang</p>
-					<p class="fragment">Organisation</p>
-					<p class="fragment">Änderungen</p>
+					<p>CSS Code ist ewig lang</p>
+					<p>Organisation</p>
+					<p>Änderungen</p>
 
 					<aside class="notes" data-markdown>
 						- Gehe zu https://www.instagram.com/ und zeige das CSS File aus dem Netzwerktab
@@ -72,16 +74,16 @@
 
 				<!------------------- Gründe ----------------------------->
 				<section>
-					<h2>Gründe</h2>
-					<p class="fragment">Schrift</p>
-					<p class="fragment">Präfixe</p>
-					<p class="fragment">Farbverläufe</p>
-					<p class="fragment">Modularität</p>
-					<p class="fragment">Wartung</p>
+					<h2>Beispiele</h2>
+					<p>Schrift</p>
+					<p>Präfixe</p>
+					<p>Farbverläufe</p>
+					<p>Modularität</p>
+					<p>Wartung</p>
 
 					<aside class="notes" data-markdown>
 						- Anstatt jedes mal das gleiche zu schreiben für die Schrift, lieber einmal eine Variable definieren und diese nutzen.
-						- (box-sizing muss mit webkit und für Firefox definiert werden) aus 3 Zeilen code wird eine. 
+						- (box-sizing muss mit webkit und für Firefox definiert werden) aus 3 Zeilen code wird eine. bzw generel 
 						- Complexe Farbverläufe müssen nicht jedesmal wiederholt werden
 						- Verschiedene Module und am Ende alles zusammenfassen
 						- schneller, leichter und besser
@@ -92,9 +94,9 @@
 				<!------------------- Grundprinzip von Präprozessoren ----------------------------->
 				<section>
 					<h2>Grundprinzip</h2>
-					<p class="fragment">CSS Dateien</p>
-					<p class="fragment">LESS / SCSS Dateien</p>
-					<p class="fragment">Compiler</p>
+					<p>CSS Dateien</p>
+					<p>LESS / SCSS Dateien</p>
+					<p>Compiler</p>
 
 
 					<aside class="notes" data-markdown>
@@ -114,39 +116,33 @@
 
 					<aside class="notes" data-markdown>
 						- [sass](https://www.sassmeister.com/)
-							- $meinefarbe: red;
-
-							@mixin uebergang {
-							  -webkit-transition: 1s all ease;
-							  transition: 1s all ease;
+							- $color: red;
+							@mixin transition {
+							transition: background-color 2s ease-out;
 							}
-							
 							p, a {
-							  @include uebergang;
+							@include transition;
 							}
-							
 							p:hover {
-							  background-color: $meinefarbe;
+							background-color: $color;
 							}
 
 						- [less](http://lesscssismore.com/)
-							- @meine-farbe: red;
-							@breite: 10px;
-							@rahmen: 10px solid blue;
-							@schrift: Helvetica, Arial, sans-serif;
-							@wichtige-farbe: orange;
-							@zweite-farbe: blue;
-
+							- @color: red;
+							@padding: 10px;
+							@border: 10px solid blue;
+							@font: Helvetica, Arial, sans-serif;
+							@important-color: orange;
+							@second-color: blue;
 							body {
-							color: @meine-farbe;
-							font-family: @schrift;
-							padding: @breite;
-							border:@rahmen;
+							color: @color;
+							font-family: @font;
+							padding: @padding;
+							border: @border;
 							}
-
 							footer {
-							color : @zweite-farbe;
-							background-color: @meine-farbe;
+							color : @second-color;
+							background-color: @color;
 							}
 
 					</aside>
@@ -161,34 +157,55 @@
 				<!------------------- Was sind die Unterschide ----------------------------->
 				<section>
 					<h2>Unterschied</h2>
-					<p class="fragment">Grundfunktionalität ist gleich</p>
-					<p class="fragment">Syntaktische Unterschiede</p>
+					<p>Grundfunktionalität ist gleich</p>
+					<p>Syntaktische Unterschiede</p>
 				</section>
 
 				<!------------------- SASS Syntax ----------------------------->
 				<section>
 					<h2>SASS</h2>
-					<p class="fragment">Variablen mit $</p>
-					<p class="fragment">Mixins mit @</p>
+					<p>Variablen mit $</p>
+					<p>Mixins mit @</p>
+					<p>@include</p>
 				</section>
 
 				<!------------------- Warum SASS? ----------------------------->
 				<section>
 					<h2>Wieso SASS?</h2>
-					<p class="fragment"><a href="https://get.foundation/index.html" target="_blank">Foundation Framework</a></p>
+					<p>Foundation Framework</p>
+					<p>compas</p>
+					<aside class="notes" data-markdown>
+						- [foundation](https://get.foundation/)
+						- compass setzt auf sass 
+							- compass ist ein sass framework, gemacht um die arbeit noch einfacher und effizienter zu gestallten 
+							- [link](http://compass-style.org/)
+							- so etwas in der art gibt es nur für SASS
+					</aside>
 				</section>
 
 				<!------------------- LESS Syntax ----------------------------->
 				<section>
 					<h2>LESS</h2>
-					<p class="fragment">Variablen mit @</p>
-					<p class="fragment">Mixins wie CSS Klassen</p>
+					<p>Variablen mit @</p>
+					<p>Mixins wie CSS Klassen</p>
 				</section>
 				
 				<!------------------- Wieso LESS ----------------------------->
 				<section>
 					<h2>Wieso LESS?</h2>
-					<p class="fragment"><a href="https://getbootstrap.com/docs/3.4/getting-started/" target="_blank">Boostrap Framework</a></p>
+					<p>Boostrap Framework</p>
+					<aside class="notes" data-markdown>
+						- [Boostrap](https://getbootstrap.com/)
+						- muss nicht vorher compiliert werden, kann durch eine js Datei beim aufrud der seite comiliert werden
+					</aside>
+				</section>
+
+				<!------------------- Wieso LESS ----------------------------->
+				<section>
+					<h2>Was soll ich verwenden?</h2>
+					<aside class="notes" data-markdown>
+						- Es kommt auf das Umfled an. Wenn in der Arbeitsumgebung verschiedene Präprozessoren eingesetzt werden kommt es zu Fehlern. Bei Team arbeiten von Beginn an einigen um Fehler vorzubeugen.
+					</aside>
 				</section>
 
 
@@ -211,6 +228,8 @@
 					<aside class="notes" data-markdown>
 						- LESS kann auch direkt im Browser durch einbinden eines JS Compilers verwendet werden. 
 							- wichtig ist hierbei das bei rel /less hinzugefügt werden muss
+						- Beispiel 0 mit ihnen gemeinsam machen!
+							- Wie man siehgt die less datei wird inline eingebunden
 					</aside>
 				</section>
 
@@ -219,6 +238,9 @@
 				<section>
 					<h3>CLI</h3>
 					<p>Dateien zuerst compilieren und anschließend an den Browser übergeben</p>
+					<aside class="notes">
+						Das ist die weitaus elegantere Lösung. Bevor die daten an den browser gegeben werden, werden alle less dateien compiliert und in einer css datei zusammengefügt
+					</aside>
 				</section>
 				<section >
 					<section data-markdown>
@@ -233,7 +255,8 @@
 							```
 
 							Note: - es muss nodejs installiert sein 
-							- es muss npm installiert sein 
+							- es muss node installiert sein (node -v)
+							- es muss npm installiert sein (npm -v)
 							- wenn die Compilierung über CLI funktioniert, muss eine less Datei vorhanden sein. die CSS datei wird automatisch erstellt.
 						</textarea>
 					</section>
@@ -251,10 +274,10 @@
 				<!------------------- GUI Compiler ----------------------------->
 				<section>
 					<h3>GUI</h3>
-					<p class="fragment">Minify</p>
-					<p class="fragment"><a target="_blank" href="http://lesscss.org/tools/#guis-for-less">GUI List</a></p>
+					<p><a target="_blank" href="http://lesscss.org/tools/#guis-for-less">GUI List</a></p>
 
 					<aside class="notes" data-markdown>
+						- Wenn jemand nicht gerne mit der cl arbeitet gibt es natürlich auch guis 
 						- Ein Vorteil von GUI Compiliern ist, dass sie die finalen CSS Dateien Minify'n. Das heisst der Whitespace wird entfernt um die Deigröße zu verkleinern.
 					</aside>
 				</section>
@@ -283,6 +306,7 @@ nav a:link, nav a:visited{
 }						
 					</code></pre>
 					<aside class="notes" data-markdown>
+						- DRY gilt nicht nur für CSS. Egal ob man PHP, JS, C++, etc. programmiert. Sobald ein Ablauf mehr als einmal vorkommt sollte man mit Variabeln / Funktionen arbeiten.
 						- Farben sind ein wunderschönes Beispiel für Wiederholungen.
 						- Variablen helfen hier aus. 
 							- Ich muss nur den Wert der Variable ändern und beim Compilieren wird die Variablen anschließend eingesetzt werden. 
@@ -293,10 +317,10 @@ nav a:link, nav a:visited{
 				<section>
 					<h3>Variablen</h3>
 					<pre class="less"><code data-line-numbers="">@color: #000;
-@breite: 10px; // Werte
-@rahmen: 10px solid purple; // Complexere Ausdrücke
-@wert: true; // Wird interessant wenn mit Bedingungen gearbeitet wird
-@schrift: Helvetic, Arial, sans-serif; // Listen
+@width: 10px; // Werte
+@border: 10px solid purple; // Complexere Ausdrücke
+@bool: true; // Wird interessant wenn mit Bedingungen gearbeitet wird
+@font: Helvetic, Arial, sans-serif; // Listen
 					</code></pre>
 
 					<aside class="notes" data-markdown>
@@ -314,6 +338,7 @@ body{
 }
 						</code></pre>	
 						<aside class="notes" data-markdown>
+							- Variablen werden gleich zugewiesen wie normale CSS Werte.
 							- Mit einem @ Zeichen wird die Variable zugewiesen.
 						</aside>				
 				</section>
@@ -348,6 +373,7 @@ nav a:focus{
 						</code></pre>
 						<aside class="notes" data-markdown>
 							- in CSS werden Selectoren so geschrieben. 
+							- was fällt euch auf ? 
 							- mit LESS gibt es eine wunderbare Funktion die sich Nesting nennt.
 						</aside>				
 				</section>
@@ -375,6 +401,7 @@ nav a:focus{
 }
 						</code></pre>
 						<aside class="notes" data-markdown="">
+							- um nicht 50 mal nav zu schreiben, werden sämtliche andere elemente in der {} geschrieben
 							- der Root selector kann nun sehr einfach geändert werden.
 							- Der CSS Code verändert sich nicht. Es müssen wesentlich weniger Selectoren geschrieben werden. 
 						</aside>				
@@ -437,7 +464,7 @@ nav a:focus{
 						</code></pre>	
 
 					<aside class="notes" data-markdown>
-						- Beim Compilierne wird automatisch ein Leerzeichen für den nachfolgenden Selector erzeugt. Durch das & Zeichen wird dieses Leerzeichen nicht eingesetzt.
+						- Beim Compilieren wird automatisch ein Leerzeichen für den nachfolgenden Selector erzeugt. Durch das & Zeichen wird dieses Leerzeichen nicht eingesetzt.
 						- Wenn per Javascript zB. eine Klasse dem Eltern element hinzugefügt wird greift dieser selector
 					</aside>
 				</section>
@@ -445,7 +472,7 @@ nav a:focus{
 				<!------------------- Mixins ----------------------------->
 				<section>
 					<h3>Mixins</h3>
-					<p class="fragment">Wiederverwendung</p>
+					<p>Wiederverwendung</p>
 					<aside class="notes" data-markdown>
 						- Mixins ermöglichen die Wiederverwenung von Code Zeilen welche aus mehr als nur einer Zeile Code besteht.
 						- Für Einfach Fälle werden Variablen genommen, welche anunterschiedlichen Stellen eingesetzt werden könne. Mixins schauen in Less genau so aus wie CSS Klassen. 
@@ -458,23 +485,26 @@ nav a:focus{
 						<pre class="less"><code data-line-numbers="">@font: Helvetica;
 
 .fontmedium {
-	font-size: 14px; // ältere Browser welche rem nicht verstehen, verwenden die 14px
-	font-size: 0.84rem; //rem ist eine relativ neue Schreibweise welche keine Probleme mit der Verärbung hat, es wird immer das Root-Element genommen
+	fontsize: 14px; // ältere Browser welche rem nicht verstehen, verwenden die 14px
+	fontsize: 0.84rem; //rem ist eine relativ neue Schreibweise welche keine Probleme mit der Verärbung hat, es wird immer das Root-Element genommen
 }
-.uebergang {
-	-webkit-transition: 1s all ease;
-	transition: 1s all ease;
+
+.transition {
+	-webkit-transition: background-color 2s ease-out;
+	-moz-transition: background-color 2s ease-out;
+	-o-transition: background-color 2s ease-out;
+	transition: background-color 2s ease-out;
 }
-	
+
 body {
 	color: red;
 	font-family: @font;
-	.fontmedium();
+	.fontmedium;
 }
 
 nav {
 	a {
-		.uebergang();
+		.transition;
 	}
 }
 
@@ -504,6 +534,7 @@ body {
 }
 						</code></pre>
 					<aside class="notes" data-markdown>
+						- eine weitere coole funktion von mixins sind parameter
 						- Ähnlich wie bei JS kann auch bei LESS mit Parametern gearbeitet werden. 
 						- Mixins ohne Parameter werden in die CSS Datei übernommen, weil sie sich von normalen CSS Klassen nicht unterscheiden. Durch das einfügen von () am ende der Mixins ohne Parameter werden diese nicht in das finale CSS file Übertragen.
 					</aside>
@@ -511,7 +542,7 @@ body {
 
 				<!------------------- Operatoren 1/2 ----------------------------->
 				<section>
-					<h3>Operatoren 1/2</h3>
+					<h3>Operatoren</h3>
 					<pre class="less"><code data-line-numbers="">@base: 5%;
 @filler: @base * 2;
 @other: @base + @filler;
@@ -524,6 +555,7 @@ body {
 }
 					</code></pre>	
 					<aside class="notes" data-markdown>
+						- auch wenn das ganze nicht viel sinn ergibt
 						- In Less kann man gewohnt wie in anderen Programmiersprachen Rechenoperationen durch führen
 						- das sind die Theoretischen Möglichkeiten, doch wird man mit Farben im real Fall wenig Rechnen.
 					</aside>
@@ -531,7 +563,7 @@ body {
 
 				<!------------------- Operatoren 2/2 ----------------------------->
 				<section>
-					<h3>Operatoren 2/2</h3>
+					<h3>Operatoren</h3>
 					<pre class="less"><code data-line-numbers="">@spalten: 12p;
 @breite: 70px;
 @abstand: 10px;
@@ -565,6 +597,11 @@ main {
 				<section>
 					<h3><a href="./uebungen/Beispiel_6_imports.zip" download>Übung 6</a></h3>
 				</section>
+
+				<section>
+					<h3><a href="http://lesscss.org/functions/" target="_blank">LESS</a></h3>
+
+				</section>
 				
 
 
@@ -586,7 +623,7 @@ main {
 						```
 						Mit **sass** werden die Dateien compiliert
 						```zsh
-							sass input.scss output.css
+							sass --watch input.scss output.css
 						```
 
 						Note: - Wie bei LESS muss für SASS nodejs installiert sein.
@@ -601,9 +638,9 @@ main {
 				<!------------------- Die Verwendung von GUI's ----------------------------->
 				<section>
 					<h3>GUI</h3>
-					<p class="fragment"><a href="https://scout-app.io/" target="_blank">Scout</a></p>
-					<p class="fragment"><a href="http://koala-app.com/" target="_blank">Koala</a></p>
-					<p class="fragment"><a href="https://www.sassmeister.com/" target="_blank">Sassmeister</a></p>
+					<p><a href="https://scout-app.io/" target="_blank">Scout</a></p>
+					<p><a href="http://koala-app.com/" target="_blank">Koala</a></p>
+					<p><a href="https://www.sassmeister.com/" target="_blank">Sassmeister</a></p>
 					<aside class="notes" data-markdown>
 						- Wie bei LESS gibt es mehrere Möglichkeiten den geschriebenen Code zu Compilieren. 
 						- Wieder würde ich euch nicht empfehlen GUI's zu verwenden.
@@ -642,12 +679,14 @@ $primary-color: #333;
 				<!------------------- Schreibweisen ----------------------------->
 				<section>
 					<h3>Schreibweisen</h3>
-					<p class="fragment">SCSS</p>
-					<p class="fragment">Indented Syntax (SASS)</p>
+					<p>SCSS</p>
+					<p>Indented Syntax (SASS)</p>
 					<aside class="notes" data-markdown>
 						- Es gibt in SASS zwei verschiedene Schreibweisen. 
 						- SCSS: ähnelt sehr der CSS schreibweise, es werden die {} verwendet.
 						- SASS: ist die ältere Schreibweise und verwendet für die Zuweisungen Einrückungen. 
+						- sass ist die alte schreibweise, scss ist die neue schreibweise
+							- ein Vorgehen nach dem Vorbild von YAML
 					</aside>
 				</section>
 
@@ -710,15 +749,17 @@ $primary-color: #333;
 
 				<!------------------- Mixins ----------------------------->
 				<section>
-					<h3>Mixins 1/2</h3>
+					<h3>Mixins</h3>
 					<pre class="sass "><code data-line-numbers="">@mixin border {
 	padding: 20px;
 	border: 1px solid green
-  }
-  
+}
+
 @mixin transition {
-	-webkit-transition: 1s all ease;
-	transition: 1s all ease;
+	-webkit-transition: background-color 2s ease-out;
+	-moz-transition: background-color 2s ease-out;
+	-o-transition: background-color 2s ease-out;
+	transition: background-color 2s ease-out;
 }
 					</code></pre>	
 					<aside class="notes" data-markdown>
@@ -728,7 +769,7 @@ $primary-color: #333;
 
 				<!------------------- Mixins ----------------------------->
 				<section>
-					<h3>Mixins 2/2</h3>
+					<h3>Mixins</h3>
 					<pre class="sass "><code data-line-numbers="">p {
 	@include border;
 }
@@ -745,11 +786,13 @@ $primary-color: #333;
 				<!------------------- Mixins mit Parameter ----------------------------->
 				<section>
 					<h3>Mixins mit Parameter</h3>
-					<pre class="sass "><code data-line-numbers="">@mixin transition($duration, $property, $type){
-	-webkit-transition: $duration $property $type;
-	transition: $duration $property $type;
+					<pre class="sass "><code data-line-numbers="">@mixin transition($duration: 1s, $property: all, $function: ease) {
+	-webkit-transition: $duration $property $function;
+	-moz-transition: $duration $property $function;
+	-o-transition: $duration $property $function;
+	transition: $duration $property $function;
 }
-  
+
 .box {
 	@include transition(2s, all, ease)
 }
@@ -801,6 +844,80 @@ aside {
 				</section>
 
 				<section>
+					<h3>Extend</h3>
+					<pre class="sass "><code data-line-numbers="">/* This CSS will print because %message-shared is extended. */
+%message-shared {
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.message {
+	@extend %message-shared;
+}
+
+.success {
+	@extend %message-shared;
+	border-color: green;
+}
+
+.error {
+	@extend %message-shared;
+	border-color: red;
+}
+
+.warning {
+	@extend %message-shared;
+	border-color: yellow;
+}
+					</code></pre>
+					<aside class="notes">
+						<ul>
+							<li>Das ist eines der nützlichsten Merkmale von SASS. Mit @extend kann ein Code Block von Eigenschaften eines Selectores zu einem weiteren weitergeben. Dadruch bleibt der Code übersichtlich. Im folgenden Beispiel werden Melungen für Fehler, Warnungen und Erfolge erstellt.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3>Output</h3>
+					<pre class="css"><code data-line-numbers="">/* This CSS will print because %message-shared is extended. */
+.message, .success, .error, .warning {
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #333;
+}
+
+.success {
+	border-color: green;
+}
+
+.error {
+	border-color: red;
+}
+
+.warning {
+	border-color: yellow;
+}
+					</code></pre>
+					<aside class="notes">
+						<ul>
+							<li>Der Code weist .message, .success, .error und .warning an, sich genau wie %message-shared zu verhalten. Das bedeutet, dass überall, wo %message-shared auftaucht, auch .message, .success, .error und .warning auftaucht. Die Magie geschieht im generierten CSS, wobei jede dieser Klassen die gleichen CSS-Eigenschaften erhält wie %message-shared.</li>
+							<li>Hinweis: %equal-heights wird nicht generiert, da %equal-heights niemals erweitert wird.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h3><a href="https://sass-lang.com/guide">SASS</a></h3>
+				</section>
+
+				<section>
 					<h2>Vergleich</h2>
 					<table>
 						<thead>
@@ -820,11 +937,19 @@ aside {
 							</tr>
 						</tbody>
 					</table>
+
+					<aside class="notes">
+						<ul>
+							<li>LESS gibt Nutzern die Möglichkeit, Mixins nur dann zu aktivieren, wenn spezifische Situationen eintreffen. Das ist ein hilfreiches Feature, allerdings ist damit die Verwendung von logischen Verknüpfungen bei LESS schon ausgeschöpft.</li>
+							<li>SASS hingegen bietet Schleifen und Fallunterscheidungen, wie man sie auch von Programmiersprachen kennt.</li>
+							<li>SASS ist sehr viel beliebter unter Webdesignern. Dies kann allerdings auch daran liegen, dass SASS ein wenig älter ist. LESS hatte zunächst noch Unterstützung durch das geschätzte Frontend-Framework Bootstrap, das auf den jüngeren Präprozessor setzte. Doch mit Version 4 hat das Projekt offiziell auf SASS gewechselt, was die Popularität der Syntactically Awesome Style Sheets noch erhöhen dürfte.</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!------------------- Download Handout ----------------------------->
 				<section>
-					<h2><a href="./handout.pdf" download>Download Script</a></h2>
+					<h2><a href="./script.pdf" download>Download Script</a></h2>
 				</section>
 
 			</div>
