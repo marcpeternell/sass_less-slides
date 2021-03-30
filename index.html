@@ -66,7 +66,7 @@
 					<p>Änderungen</p>
 
 					<aside class="notes" data-markdown>
-						- Gehe zu https://www.instagram.com/ und zeige das CSS File aus dem Netzwerktab
+						- Gehe zu https://codepen.io/marcpeternell/pen/vYgydXJ
 						- Für jeden Context ein File z.B. ein File für alle Eigenschaften auf die Schrift bezogen
 						- Bei Farben müssen bei jeder Änderungen sämtliche Stellen herausgesucht werden und geändert werden. Mit dem Präprozessoren können Variablen definiert werden welche anschließend im File referenziert werden
 					</aside>
@@ -84,10 +84,10 @@
 					<aside class="notes" data-markdown>
 						- Anstatt jedes mal das gleiche zu schreiben für die Schrift, lieber einmal eine Variable definieren und diese nutzen.
 						- (box-sizing muss mit webkit und für Firefox definiert werden) aus 3 Zeilen code wird eine. bzw generel 
-						- Complexe Farbverläufe müssen nicht jedesmal wiederholt werden
-						- Verschiedene Module und am Ende alles zusammenfassen
+						- Farbverläufe müssen nicht jedesmal wiederholt werden z.B: https://codepen.io/marcpeternell/pen/abpBqdv
+						- Verschiedene Module und am Ende alles zusammenfassen https://codepen.io/marcpeternell/pen/VwPmQPb
 						- schneller, leichter und besser
-						- Große Frameworks wie Boostrap verwenden auch Präprozessoren. 
+						- Große Frameworks wie Boostrap / Tailwind verwenden auch Präprozessoren.
 					</aside>
 				</section>
 
@@ -113,39 +113,6 @@
 					<blockquote>
 						Programm, das dazu dient, eine andere Programmiersprache in die Programmiersprache eines bestimmten Computers zu übersetzen
 					</blockquote>
-
-					<aside class="notes" data-markdown>
-						- [sass](https://www.sassmeister.com/)
-							- $color: red;
-							@mixin transition {
-							transition: background-color 2s ease-out;
-							}
-							p, a {
-							@include transition;
-							}
-							p:hover {
-							background-color: $color;
-							}
-
-						- [less](http://lesscssismore.com/)
-							- @color: red;
-							@padding: 10px;
-							@border: 10px solid blue;
-							@font: Helvetica, Arial, sans-serif;
-							@important-color: orange;
-							@second-color: blue;
-							body {
-							color: @color;
-							font-family: @font;
-							padding: @padding;
-							border: @border;
-							}
-							footer {
-							color : @second-color;
-							background-color: @color;
-							}
-
-					</aside>
 				</section>
 
 				<!------------------- LESS vs SASS ----------------------------->
@@ -167,6 +134,38 @@
 					<p>Variablen mit $</p>
 					<p>Mixins mit @</p>
 					<p>@include</p>
+					<aside class="notes" data-markdown>
+						- [gehe zu sass](https://www.sassmeister.com/)
+						- $color: red;
+						@mixin transition {
+						transition: background-color 2s ease-out;
+						}
+						p, a {
+						@include transition;
+						}
+						p:hover {
+						background-color: $color;
+						}
+
+						- [gehe zu less](http://lesscssismore.com/)
+						- @color: red;
+						@padding: 10px;
+						@border: 10px solid blue;
+						@font: Helvetica, Arial, sans-serif;
+						@important-color: orange;
+						@second-color: blue;
+						body {
+						color: @color;
+						font-family: @font;
+						padding: @padding;
+						border: @border;
+						}
+						footer {
+						color : @second-color;
+						background-color: @color;
+						}
+
+					</aside>
 				</section>
 
 				<!------------------- Warum SASS? ----------------------------->
@@ -175,8 +174,8 @@
 					<p>Foundation Framework</p>
 					<p>compas</p>
 					<aside class="notes" data-markdown>
-						- [foundation](https://get.foundation/)
-						- compass setzt auf sass 
+						- [tailwind](https://tailwindcss.com)
+						- compass setzt auf sass
 							- compass ist ein sass framework, gemacht um die arbeit noch einfacher und effizienter zu gestallten 
 							- [link](http://compass-style.org/)
 							- so etwas in der art gibt es nur für SASS
@@ -269,6 +268,10 @@
 				<!------------------- Uebung 1 less Datei in eine CSS datei umwandeln mit CLI ----------------------------->
 				<section>
 					<h3><a href="./uebungen/Beispiel_1_cli.zip" download="">Übung 1</a></h3>
+					<aside class="notes" data-markdown>
+						- lessc input.less output.css
+						- link rel="stylesheet" href="mystyle.css"
+					</aside>
 				</section>
 
 				<!------------------- GUI Compiler ----------------------------->
@@ -440,7 +443,7 @@ nav a:focus{
 }
 						</code></pre>
 						<aside class="notes" data-markdown>
-							- Durch den & Selector kann können wir auch pseudo Klassen ansprechen
+							- Durch den & Selector (Ampersand) kann können wir auch pseudo Klassen ansprechen
 						</aside>				
 				</section>
 
